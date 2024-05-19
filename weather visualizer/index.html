@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Visualizer</title>
+<link rel="stylesheet" href="./style.css">        
+</head>
+<body>
+    <div class="heading">Weather Visualizer</div>
+    <script>
+        var weather = prompt("Enter your area weather: \n 1. hot \n 2. cold \n 3. sunny \n 4. cloudly  \n 5. partly \n 6. rainy \n 7. stormy \n 8. windy \n 9. snowy \n "); 
+
+        if (weather == 'hot') {
+            document.write('<div class="card">' +
+                '<img src="https://t4.ftcdn.net/jpg/05/18/43/73/360_F_518437397_j4c3cOSYK54AjCis5muIjPaHw2KBTCeH.jpg" alt="Hot Weather">' +
+                '<div class="card-body">' +
+                '<h1>It\'s ' + weather + ' today</h1>' +
+                '<div class="reaction">Stay hydrated and cool! 🥤</div>' +
+                '</div>' + 
+                '</div>');
+        } else if (weather == 'cold') {
+            document.write('<div class="card">' +
+                '<img src="https://images.unsplash.com/photo-1612208695882-02f2322b7fee?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29sZCUyMHdlYXRoZXJ8ZW58MHx8MHx8fDA%3D" alt="Cold Weather">' +
+                '<div class="card-body">' +
+                '<h1>It\'s ' + weather + ' today</h1>' +
+                '<div class="reaction">Bundle up and stay warm! ❄️</div>' +
+                '</div>' +
+                '</div>');
+        } else if (weather == 'sunny') {
+            document.write('<div class="card">' +
+                '<img src="https://png.pngtree.com/background/20230614/original/pngtree-sun-in-a-field-on-a-sunny-day-picture-image_3530002.jpg" alt="Sunny Weather">' +
+                '<div class="card-body">' +
+                '<h1>It\'s ' + weather + ' today</h1>' +
+                '<div class="reaction">Don\'t forget your sunglasses! 😎</div>' +
+                '</div>' +
+                '</div>');
+        } else if (weather == 'cloudy') {
+            document.write('<div class="card">' +
+                '<img src="https://media.istockphoto.com/id/157527872/photo/storm-cloud.jpg?s=612x612&w=0&k=20&c=wsK-fd2hBm9SGlV_lnKYqFCAS3-_sk-f9GFAUbT6H40=" alt="Cloudy Weather">' +
+                '<div class="card-body">' +
+                '<h1>It\'s ' + weather + ' today</h1>' +
+                '<div class="reaction">A gloomy day, perfect for a cozy book. 📚</div>' +
+                '</div>' +
+                '</div>');
+        } else if (weather == 'partly') {
+            document.write('<div class="card">' +
+                '<img src="https://media.istockphoto.com/id/531535355/photo/four-season-tree-photo-manipulation-magical-nature.jpg?s=612x612&w=0&k=20&c=DrRJdixsMjpChsSkcbHjL9zUH9lo1okzDd4OSu5G0LU=" alt="Partly Cloudy Weather">' +
+                '<div class="card-body">' +
+                '<h1>It\'s ' + weather + ' today</h1>' +
+                '<div class="reaction">A mix of sun and clouds! 🌤️</div>' +
+                '</div>' +
+                '</div>');
+        } else if (weather == 'rainy') {
+            document.write('<div class="card">' +
+                '<img src="https://img.freepik.com/free-photo/weather-effects-composition_23-2149853295.jpg" alt="Rainy Weather">' +
+                '<div class="card-body">' +
+                '<h1>It\'s ' + weather + ' today</h1>' +
+                '<div class="reaction">Grab an umbrella! ☔</div>' +
+                '</div>' +
+                '</div>');
+        } else if (weather == 'stormy') {
+            document.write('<div class="card">' +
+                '<img src="https://www.timeforkids.com/wp-content/uploads/2019/03/THUNDERWEATHER.jpg" alt="Stormy Weather">' +
+                '<div class="card-body">' +
+                '<h1>It\'s ' + weather + ' today</h1>' +
+                '<div class="reaction">Stay indoors and be safe! ⛈️</div>' +
+                '</div>' +
+                '</div>');
+        } 
+        
+        
+        else if (weather == 'windy') {
+            document.write('<div class="card">' +
+                '<img src="https://t3.ftcdn.net/jpg/04/99/96/18/360_F_499961849_RTPjXHECUHBi4X9ZrpVTxb30Esx0bvIq.jpg " alt="Windy Weather">' +
+                '<div class="card-body">' +
+                '<h1>It\'s ' + weather + ' today</h1>' +
+                '<div class="reaction">Hold onto your hat! 💨</div>' +
+                '</div>' +
+                '</div>');
+        } else if (weather == 'snowy') {
+            document.write('<div class="card">' +
+                '<img src="https://img.freepik.com/free-photo/christmas-lantern-with-fir-branch-decoration-snowy-table-defocused-background-generative-ai_1258-150778.jpg" alt="Snowy Weather">' +
+                '<div class="card-body">' +
+                '<h1>It\'s ' + weather + ' today</h1>' +
+                '<div class="reaction">Time for some snow fun! ☃️</div>' +
+                '</div>' +
+                '</div>');
+        } else {
+            document.write('<div class="card">' +
+                '<div class="card-body">' +
+                '<h1>😜 Are you kidding me?</h1>' +
+                '<div class="reaction">Please enter a valid weather condition.</div>' +
+                '</div>' +
+                '</div>');
+        }
+    </script>
+</body>
+</html>
