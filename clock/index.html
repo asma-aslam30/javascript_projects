@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hourly Weather Visualizer</title>
+    <style>
+        .card {
+            text-align: center;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .card img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        .card-body {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="heading">Hourly Weather Visualizer</div>
+    <div id="weather-container"></div>
+
+    <script>
+        var currentHour = new Date().getHours();
+        var weatherContainer = document.getElementById("weather-container");
+        var message, image;
+
+        if (currentHour === 0) {
+            message = "Midnight calmness.";
+            image = "https://cdn4.vectorstock.com/i/1000x1000/19/53/night-calmness-background-vector-39721953.jpg";
+        } else if (currentHour === 1) {
+            message = "Late night thoughts.";
+            image = "https://i1.sndcdn.com/artworks-IXmy3UoHpLzIe7SG-td0Xhg-t500x500.jpg";
+        } else if (currentHour === 2) {
+            message = "Deep in the night.";
+            image = "https://sgiumc.org/wp-content/uploads/2017/06/SGI-at-night-2.png";
+        } else if (currentHour === 3) {
+            message = "Night whispers.";
+            image = "https://example.com/night3.jpg";
+        } else if (currentHour === 4) {
+            message = "Early morning hush.";
+            image = "https://example.com/morning4.jpg";
+        } else if (currentHour === 5) {
+            message = "Dawn breaking.";
+            image = "https://example.com/dawn5.jpg";
+        } else if (currentHour === 6) {
+            message = "Morning has broken.";
+            image = "https://example.com/morning6.jpg";
+        } else if (currentHour === 7) {
+            message = "Early morning sunshine.";
+            image = "https://example.com/sunshine7.jpg";
+        } else if (currentHour === 8) {
+            message = "Bright morning.";
+            image = "https://example.com/bright8.jpg";
+        } else if (currentHour === 9) {
+            message = "Mid-morning glow.";
+            image = "https://example.com/midmorning9.jpg";
+        } else if (currentHour === 10) {
+            message = "Almost noon.";
+            image = "https://example.com/almostnoon10.jpg";
+        } else if (currentHour === 11) {
+            message = "Late morning sun.";
+            image = "https://example.com/latemorning11.jpg";
+        } else if (currentHour === 12) {
+            message = "Sunny noon!";
+            image = "https://cdn.pixabay.com/photo/2017/12/04/05/11/sunny-soon-2996366_1280.jpg";
+        } else if (currentHour === 13) {
+            message = "Post-lunch lull.";
+            image = "https://example.com/postlunch13.jpg";
+        } else if (currentHour === 14) {
+            message = "Afternoon blaze.";
+            image = "https://example.com/afternoon14.jpg";
+        } else if (currentHour === 15) {
+            message = "Late afternoon sun.";
+            image = "https://example.com/lateafternoon15.jpg";
+        } else if (currentHour === 16) {
+            message = "Early evening glow.";
+            image = "https://example.com/earlyevening16.jpg";
+        } else if (currentHour === 17) {
+            message = "Beautiful evening.";
+            image = "https://example.com/evening.jpg";
+        } else if (currentHour === 18) {
+            message = "Setting sun.";
+            image = "https://example.com/settingsun18.jpg";
+        } else if (currentHour === 19) {
+            message = "Dusk is here.";
+            image = "https://example.com/dusk19.jpg";
+        } else if (currentHour === 20) {
+            message = "Early night.";
+            image = "https://example.com/earlynight20.jpg";
+        } else if (currentHour === 21) {
+            message = "Night time.";
+            image = "https://example.com/night21.jpg";
+        } else if (currentHour === 22) {
+            message = "Late night calm.";
+            image = "https://example.com/latenight22.jpg";
+        } else if (currentHour === 23) {
+            message = "Late night.";
+            image = "https://example.com/latenight2.jpg";
+        } else {
+            message = "Time flies!";
+            image = "https://example.com/default.jpg";
+        }
+
+        weatherContainer.innerHTML = `
+            <div class="card">
+                <img src="${image}" alt="Weather Image">
+                <div class="card-body">
+                    <h1>${message}</h1>
+                    <div class="reaction">Current Hour: ${currentHour}</div>
+                </div>
+            </div>
+        `;
+    </script>
+</body>
+</html>

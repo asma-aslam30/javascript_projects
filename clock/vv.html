@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sequential Input Form</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const inputs = document.querySelectorAll('.sequential-input');
+            inputs.forEach((input, index) => {
+                if (index > 0) {
+                    input.disabled = true;
+                }
+
+                input.addEventListener('input', () => {
+                    if (input.value !== '' && index < inputs.length - 1) {
+                        inputs[index + 1].disabled = false;
+                        inputs[index + 1].focus();
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <form id="userForm" action="/submit-form" method="POST">
+        <div>
+            <label for="input1">Input 1:</label>
+            <input type="text" id="input1" name="input1" class="sequential-input">
+        </div>
+        <div>
+            <label for="input2">Input 2:</label>
+            <input type="text" id="input2" name="input2" class="sequential-input">
+        </div>
+        <div>
+            <label for="input3">Input 3:</label>
+            <input type="text" id="input3" name="input3" class="sequential-input">
+        </div>
+        <!-- Add more input fields as needed up to input10 -->
+        <div>
+            <label for="input10">Input 10:</label>
+            <input type="text" id="input10" name="input10" class="sequential-input">
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
