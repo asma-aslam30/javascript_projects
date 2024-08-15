@@ -1,4 +1,4 @@
-// Set the date for the start of Ramadan
+ // Set the date for the start of Ramadan
 const ramadanStartDate = new Date('2025-02-28T00:00:00');
 
 // Function to update the countdown

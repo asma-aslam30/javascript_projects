@@ -1,6 +1,5 @@
 body {
     font-family: Arial, sans-serif;
-    background: #a112120b;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,17 +18,20 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(94, 35, 136, 0.1);
     border: 3px solid black;
-    
+    max-width: 90%;
+    margin: 0 auto;
 }
 
 h1 {
     margin-bottom: 20px;
+    font-size: 1.5em;
 }
 
 #countdown {
     display: flex;
     justify-content: center;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 #countdown div {
@@ -37,9 +39,26 @@ h1 {
     padding: 10px;
     border-radius: 5px;
     min-width: 70px;
+    text-align: center;
 }
 
 #countdown span {
     font-size: 2em;
     display: block;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.2em;
+    }
+    
+    #countdown span {
+        font-size: 1.5em;
+    }
+    
+    #countdown div {
+        min-width: 50px;
+        padding: 5px;
+    }
 }

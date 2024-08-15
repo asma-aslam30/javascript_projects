@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List App</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="list" ondragover="allowDrop(event)" ondrop="drop(event)">
+      <h3>To-Do</h3>
+      <ul id="todo-list" class="task-list">
+        <li class="todo-item" draggable="true" ondragstart="drag(event)">Asma <button class="edit-btn" onclick="editTask(this)">Edit</button></li>
+        <li class="todo-item" draggable="true" ondragstart="drag(event)">Kickoff meeting <button class="edit-btn" onclick="editTask(this)">Edit</button></li>
+        <li class="todo-item" draggable="true" ondragstart="drag(event)">meeting <button class="edit-btn" onclick="editTask(this)">Edit</button></li>
+      </ul>
+      <button onclick="addCard('todo-list')">+ Add a card</button>
+    </div>
+    <div class="list" ondragover="allowDrop(event)" ondrop="drop(event)">
+      <h3>Doing</h3>
+      <ul id="doing-list" class="task-list">
+        <li class="todo-item" draggable="true" ondragstart="drag(event)">Eating <button class="edit-btn" onclick="editTask(this)">Edit</button></li>
+      </ul>
+      <button onclick="addCard('doing-list')">+ Add a card</button>
+    </div>
+    <div class="list" ondragover="allowDrop(event)" ondrop="drop(event)">
+      <h3>Done</h3>
+      <ul id="done-list" class="task-list">
+        <li class="todo-item" draggable="true" ondragstart="drag(event)">Drinking<button class="edit-btn" onclick="editTask(this)">Edit</button></li>
+      </ul>
+      <button onclick="addCard('done-list')">+ Add a card</button>
+    </div>
+    <div class="list" ondragover="allowDrop(event)" ondrop="drop(event)">
+      <h3>Pending</h3>
+      <ul id="sdfghjkm-list" class="task-list">
+        <li class="todo-item" draggable="true" ondragstart="drag(event)">N <button class="edit-btn" onclick="editTask(this)">Edit</button></li>
+        <li class="todo-item" draggable="true" ondragstart="drag(event)">DFGHJK <button class="edit-btn" onclick="editTask(this)">Edit</button></li>
+      </ul>
+      <button onclick="addCard('sdfghjkm-list')">+ Add a card</button>
+    </div>
+    <div class="list" ondragover="allowDrop(event)" ondrop="drop(event)">
+      <h3>Suggested</h3>
+      <ul id="fghjnmk-list" class="task-list"></ul>
+      <button onclick="addCard('fghjnmk-list')">+ Add a card</button>
+    </div>
+  </div>
+
+</body>
+
+</html>
