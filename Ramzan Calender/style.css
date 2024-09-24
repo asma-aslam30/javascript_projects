@@ -8,57 +8,65 @@ body {
     background-image: url("https://diaryofapmpmom.com/wp-content/uploads/2016/06/dscf6703.jpg?w=900");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.container {
+    background-size: cover; /* Ensures full coverage of background */
+    background-attachment: fixed; /* Keeps the image fixed while scrolling */
+  }
+  
+  @media (max-width: 768px) {
+    body {
+      background-size: contain; /* Adjusts the image to fit smaller screens without losing aspect ratio */
+    }
+  }
+  
+  .container {
     text-align: center;
-    background: #b55252;
+    background: #b55252; /* Background color for contrast */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(94, 35, 136, 0.1);
     border: 3px solid black;
-    max-width: 90%;
+    max-width: 90%; /* Adjusts the container width for responsiveness */
     margin: 0 auto;
-}
-
-h1 {
+  }
+  
+  h1 {
     margin-bottom: 20px;
-    font-size: 1.5em;
-}
-
-#countdown {
+    font-size: 1.5em; /* Headline size */
+  }
+  
+  #countdown {
     display: flex;
     justify-content: center;
     gap: 10px;
-    flex-wrap: wrap;
-}
-
-#countdown div {
-    background: #eeeeee;
+    flex-wrap: wrap; /* Ensures countdown boxes wrap on smaller screens */
+  }
+  
+  #countdown div {
+    background: #eeeeee; /* Background color for countdown blocks */
     padding: 10px;
     border-radius: 5px;
-    min-width: 70px;
+    min-width: 70px; /* Sets a minimum width for countdown blocks */
     text-align: center;
-}
-
-#countdown span {
-    font-size: 2em;
+  }
+  
+  #countdown span {
+    font-size: 2em; /* Countdown number font size */
     display: block;
-}
-
-/* Responsive Styles */
-@media (max-width: 600px) {
+  }
+  
+  /* Responsive Styles for small screens */
+  @media (max-width: 600px) {
     h1 {
-        font-size: 1.2em;
+      font-size: 1.2em; /* Adjusts the headline size for smaller screens */
     }
-    
+  
     #countdown span {
-        font-size: 1.5em;
+      font-size: 1.5em; /* Decreases font size of countdown numbers */
     }
-    
+  
     #countdown div {
-        min-width: 50px;
-        padding: 5px;
+      min-width: 50px; /* Smaller countdown boxes for smaller screens */
+      padding: 5px; /* Reduced padding for compact display */
     }
-}
+  }
+  
