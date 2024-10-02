@@ -26,14 +26,14 @@
         <div class="form-inner">
           <form action="#" class="login">
             <div class="field">
-              <input type="email" placeholder="Email Address" required />
+              <input type="email" placeholder="Email Address" id="lemail" required />
             </div>
             <div class="field">
-              <input type="password" placeholder="Password" required />
+              <input type="password" placeholder="Password" required id="lpassward" />
             </div>
             <div class="password-link"><a href="#">Forgot Password?</a></div>
             <div class="field">
-              <input type="submit" value="Login" />
+              <input type="submit" value="Login" onclick="login" />
             </div>
             <div class="signup-link">
               Not a Member? <a href="#">Signup Now</a>
@@ -42,16 +42,16 @@
           <!-- / Login Form -->
           <form action="#" class="signup">
             <div class="field">
-              <input type="email" placeholder="Email Address" required />
+              <input type="email" placeholder="Email Address" id="email" />
             </div>
             <div class="field">
-              <input type="password" placeholder="Password" required />
+              <input type="password" placeholder="Password" required id="password"/>
             </div>
             <div class="field">
-              <input type="password" placeholder="Confirm Password" required />
+              <input type="password" placeholder="Confirm Password" required id="cnfrmpassword" />
             </div>
             <div class="field">
-              <input type="submit" value="Signup" />
+              <input type="submit" value="Signup"  onclick="register()"/>
             </div>
             <!-- <div class="login-link">
               Allready Have an Account? <a href="#">Login Now</a>
@@ -60,5 +60,6 @@
         </div>
       </div>
     </main>
+    
   </body>
 </html>
